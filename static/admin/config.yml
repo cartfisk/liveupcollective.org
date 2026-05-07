@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_ORG/liveup-collective
+  repo: cartfisk/liveupcollective.org
   branch: main
 
 media_folder: static/images/uploads
