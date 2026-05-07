@@ -1,0 +1,16 @@
+<section class="cta section" id="get-involved">
+  <div class="container">
+    <h2 class="cta__heading">What can you do</h2>
+    <p class="cta__intro">{{ .Params.cta_intro }}</p>
+
+    <p class="cta__project">{{ .Params.cta_project_description }}</p>
+    <p class="cta__examples">{{ .Params.cta_examples }}</p>
+    <p class="cta__note">{{ .Params.cta_note }}</p>
+
+    <div class="cta__items">
+      {{ range .Params.cta_items }}
+        <a class="cta__item" href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>

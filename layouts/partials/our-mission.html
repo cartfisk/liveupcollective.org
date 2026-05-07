@@ -1,0 +1,16 @@
+<section class="mission section" id="mission">
+  <div class="container">
+    <h2 class="mission__heading">Our Mission</h2>
+    <p class="mission__intro">{{ .Params.mission_intro }}</p>
+    <p class="mission__sub">What we stand for:</p>
+
+    <div class="mission__pillars">
+      {{ range .Params.mission_pillars }}
+        <div class="mission__pillar">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

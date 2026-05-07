@@ -1,0 +1,17 @@
+<section class="impact section" id="impact">
+  <div class="container">
+    <h2 class="impact__heading">Your Impact</h2>
+    <p class="impact__intro">{{ .Params.impact_intro }}</p>
+
+    <ul class="impact__list">
+      {{ range .Params.impact_items }}
+        <li class="impact__item">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </li>
+      {{ end }}
+    </ul>
+
+    <p class="impact__closing">{{ .Params.impact_closing }}</p>
+  </div>
+</section>
