@@ -2,6 +2,17 @@
    The Live Up Collective — main stylesheet
    ========================================================= */
 
+/* 0. Self-hosted fonts
+   --------------------------------------------------------- */
+@font-face {
+  font-family: 'Norwester';
+  src: url('../fonts/norwester.woff2') format('woff2'),
+       url('../fonts/norwester.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* 1. Design tokens
    --------------------------------------------------------- */
 :root {
@@ -16,9 +27,9 @@
   --text-muted:    #4A4A4A;
   --text-on-green: #FFFFFF;
 
-  --font-display:  'Playfair Display', Georgia, serif;
-  --font-accent:   'Oswald', Impact, sans-serif;
-  --font-body:     'Lato', Helvetica, sans-serif;
+  --font-display:  'Noto Serif Display', Georgia, serif;
+  --font-accent:   'Norwester', Impact, sans-serif;
+  --font-body:     'Crimson Pro', Georgia, serif;
 
   --text-hero:     clamp(2.8rem, 6vw, 5rem);
   --text-h2:       clamp(2rem, 4vw, 3rem);
@@ -28,6 +39,18 @@
 
   --section-pad:   clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 6rem);
   --max-width:     1100px;
+}
+
+/* 1b. Width axis for Noto Serif Display (ExtraCondensed = 62.5%)
+   --------------------------------------------------------- */
+.section-heading,
+.who__heading, .who__tags,
+.problem__heading, .problem__stat-number,
+.mission__heading, .mission__sub, .mission__pillar h3,
+.impact__heading, .impact__item h3,
+.cta__heading, .cta__project,
+.site-footer__statement {
+  font-stretch: 62.5%;
 }
 
 /* 2. Reset / base
@@ -123,28 +146,23 @@ a { color: inherit; text-decoration: none; }
   gap: 1rem;
 }
 .site-nav__logo {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--white);
 }
 .site-nav .btn-gold { padding: 0.6rem 1.1rem; }
 
-/* Logo arrow on the I in "Live" — subtle ↑ marker */
-.logo-arrow {
+/* Logo "U" replaced by custom SVG glyph — Norwester-style U with arrow shaft + head extending up from right stem */
+.logo-up {
   display: inline-block;
-  position: relative;
-}
-.logo-arrow::after {
-  content: "↑";
-  position: absolute;
-  top: -0.55em;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.55em;
-  color: var(--gold);
-  font-family: var(--font-accent);
+  height: 0.8em;          /* ~ Norwester cap height */
+  width: auto;
+  vertical-align: baseline;
+  overflow: visible;       /* arrow extends above viewBox */
+  margin-right: -.3em;
 }
 
 /* 5. Hero
@@ -164,10 +182,12 @@ a { color: inherit; text-decoration: none; }
   gap: 2rem;
 }
 .hero__logo {
-  font-family: var(--font-display);
-  font-weight: 900;
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: var(--text-hero);
-  line-height: 1.05;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   margin: 0 0 1.25rem;
   color: var(--white);
 }
