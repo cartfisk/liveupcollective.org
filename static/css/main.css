@@ -158,7 +158,7 @@ a { color: inherit; text-decoration: none; }
 /* Logo "U" replaced by custom SVG glyph — Norwester-style U with arrow shaft + head extending up from right stem */
 .logo-up {
   display: inline-block;
-  height: 0.8em;          /* ~ Norwester cap height */
+  height: 1.31em;          /* ~ Norwester cap height */
   width: auto;
   vertical-align: baseline;
   overflow: visible;       /* arrow extends above viewBox */
