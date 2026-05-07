@@ -1,0 +1,12 @@
+baseURL = "https://liveupcollective.org/"
+languageCode = "en-us"
+title = "The Live Up Collective"
+
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+description = "Enduring hard things to raise support for those who don't think they can."

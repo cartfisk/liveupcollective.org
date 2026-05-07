@@ -1,0 +1,32 @@
+<section class="who section" id="who">
+  <div class="container">
+    <h2 class="who__heading">
+      Who we <span class="live-up">LIVE UP</span> for
+    </h2>
+    <p class="who__sub">{{ .Params.who_subheading }}</p>
+
+    <p class="who__stamp">{{ upper .Params.who_stamp_text }}</p>
+
+    <div class="who__row">
+      <div class="who__photo">
+        <img
+          src="https://picsum.photos/seed/liveup1/400/500"
+          alt="Teens in community"
+          loading="lazy"
+        />
+      </div>
+      <div class="who__tags">
+        {{ range .Params.who_tags }}<span>{{ . }}</span>{{ end }}
+      </div>
+      <div class="who__photo">
+        <img
+          src="https://picsum.photos/seed/liveup2/400/500"
+          alt="Youth support group"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <p class="who__quote">{{ .Params.who_closing_quote }}</p>
+  </div>
+</section>

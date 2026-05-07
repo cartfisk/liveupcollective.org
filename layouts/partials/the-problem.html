@@ -1,0 +1,30 @@
+<section class="problem section" id="problem">
+  <div class="container">
+    <h2 class="problem__heading">The Problem</h2>
+
+    <div class="problem__row">
+      <div class="problem__col">
+        <img
+          src="https://picsum.photos/seed/liveup3/360/280"
+          alt="Teen contemplative"
+          loading="lazy"
+        />
+        <p>{{ .Params.problem_col1_text }}</p>
+      </div>
+
+      <div class="problem__stat">
+        <span class="problem__stat-number">{{ .Params.problem_stat }}</span>
+        <span class="problem__stat-label">{{ .Params.problem_stat_label }}</span>
+      </div>
+
+      <div class="problem__col">
+        <img
+          src="https://picsum.photos/seed/liveup4/360/280"
+          alt="Teen struggle"
+          loading="lazy"
+        />
+        <p>{{ .Params.problem_col3_text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
